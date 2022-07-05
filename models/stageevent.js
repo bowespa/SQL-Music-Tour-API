@@ -26,11 +26,12 @@ module.exports = (sequelize, DataTypes) => {
     event_id: {
       type: DataTypes.SMALLINT,
       allowNull: false
-    },
+    }
+  }, {
     sequelize,
     modelName: 'StageEvent',
     tableName: 'stage_events',
-    timestamps: false
-  });
+    timestamps: false,
+  })
   return StageEvent;
 };

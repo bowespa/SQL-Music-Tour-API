@@ -34,7 +34,8 @@ module.exports = (sequelize, DataTypes) => {
     meet_end_time: {
       type: DataTypes.DATE,
       allowNull: false
-    },
+    }
+  }, {
     sequelize,
     modelName: 'MeetGreet',
     tableName: 'meet_greets',

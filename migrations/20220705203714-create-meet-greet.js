@@ -1,12 +1,16 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('MeetGreets', {
-      meet_greet_id: {
+    await queryInterface.createTable('meet_greets', {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      meet_greet_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       event_id: {
         type: Sequelize.SMALLINT,
@@ -27,6 +31,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('MeetGreets');
+    await queryInterface.dropTable('meet_greets');
   }
 };
